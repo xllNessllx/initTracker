@@ -1,2 +1,2 @@
 # initTracker
-## A Initiative Tracker for DnD
+## An Initiative Tracker for DnD
