@@ -6,22 +6,102 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-    <title>Hello World!</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <title>initTracker</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    <script>
-      Initiative= {}
-      werte = {
-        'name': "zombie",
-        'init': 10,
-      }
-      Initiative = {...Initiative,...werte}
-      JSON.stringify()
+    <div class="container">
+      <div class="row">
+        <nav class="navbar bg-danger navbar-expand-sm h-25" id="titlebars">
+          <div class="col-10 text-right">
+          </div>
+          <div class="col-1" style="text-align: right;">
+            <p><button id="closeBtn" class="btn my-2 my-sm-0 text-right" type="submit" height="10">-</button></p>
+          </div>
+          <div class="col-1" style="text-align: right;">
+            <p><button id="closeBtn" class="btn my-2 my-sm-0 text-right" type="submit" height="10">x</button></p>
+          </div>
+        </nav>
+      </div> 
+      </div class="row">
+        <nav class="navbar bg-dark">
+          <div class="col">
+            <img src="images/DD_Transparent.png" height="36"></img>
+          </div>
+          <div class="col">
+            <a class="navbar-brand text-white" href="#">initTracker</a>
+          </div>
+          <div class="col">  
+              <input id="name" class="form-control mr-sm-2" type="search" placeholder="Name">
+          </div> 
+          <div class="col">  
+            <input id="initiative" class="form-control mr-sm-2" type="search" placeholder="Initiative">
+        </div>  
+          <div class="col">
+            <button class="btn btn-outline-danger btn-light my-2 my-sm-0" type="submit">Add</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Next Turn</button>
+          </div>
+        </nav>
+      </div>
+        <div class="col-12">
+          <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <a class="list-group-item  outline-danger bg-danger" href="#" onclick="openWindow()">Dapibus ac facilisis in</a>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+          <!-- <div class="d-grid gap-2 mt-2">
+            <div class="p-2 bg-danger borderr">Grid item 1</div>
+            <div class="p-2 bg-white border">Grid item 2</div>
+            <div class="p-2 bg-white border">Grid item 3</div>
+            <div class="p-2 bg-white border">Grid item 1</div>
+            <div class="p-2 bg-white border">Grid item 2</div>
+            <div class="p-2 bg-white border">Grid item 3</div>
+            <div class="p-2 bg-white border">Grid item 1</div>
+            <div class="p-2 bg-white border">Grid item 2</div>
+            <div class="p-2 bg-white border">Grid item 3</div>
+            <div class="p-2 bg-white border">Grid item 1</div>
+            <div class="p-2 bg-white border">Grid item 2</div>
+            <div class="p-2 bg-white border">Grid item 3</div>
+            <div class="p-2 bg-white border">Grid item 1</div>
+            <div class="p-2 bg-white border">Grid item 2</div>
+            <div class="p-2 bg-white border">Grid item 3</div>
+            <div class="p-2 bg-white border">Grid item 1</div>
+            <div class="p-2 bg-white border">Grid item 2</div>
+            <div class="p-2 bg-white border">Grid item 3</div>
+            <div class="p-2 bg-white border">Grid item 1</div>
+            <div class="p-2 bg-white border">Grid item 2</div>
+            <div class="p-2 bg-white border">Grid item 3</div>
+          </div> -->
+      </div> 
+    </div>
+    <script src="listBuilder.js">
+      function openWindow(){
+    open("http://www.google.com","firefox");
+}
     </script>
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-    <a class="btn btn-primary" href="initList/initList.html">Primary</a>
   </body>
 </html>

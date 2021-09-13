@@ -5,9 +5,11 @@ function createWindow () {
     const win = new BrowserWindow({
       width: 800,
       height: 600,
-      //frame: false
+      frame: false,
+      // transparent: true,
+      icon: path.join(__dirname + '/images/DD_Transparent.png'), 
       webPreferences: {
-        preload: path.join(__dirname, 'preload.js')
+        preload: path.join(__dirname, 'listBuilder.js')
       }
     })
   
