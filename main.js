@@ -5,7 +5,12 @@ function createWindow () {
     const win = new BrowserWindow({
       width: 800,
       height: 600,
-      frame: false,
+      // frame: false,
+      titleBarStyle: 'hidden',
+      titleBarOverlay: {
+        color: '#dc3545',
+        symbolColor: '#fff',
+      },
       // transparent: true,
       icon: path.join(__dirname + '/images/DD_Transparent.png'), 
       webPreferences: {
@@ -16,7 +21,7 @@ function createWindow () {
     })
   
     // Opens Debug Console
-    win.webContents.openDevTools()
+    // win.webContents.openDevTools()
 
     win.removeMenu()
 
