@@ -2,15 +2,13 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <script src="js/vue.js"></script>
     <link rel="stylesheet" href="css/custom.css">
     <title>initTracker</title>
   </head>
-  <body>
-    <div class="container">
+  <body style="overflow-y: hidden;">
+    <div class="container-fluid">
       <div class="row">
         <nav class="navbar bg-danger navbar-expand-sm h-25" id="titlebar">
           <div class="col-10 text-right">
@@ -22,8 +20,6 @@
             <p><button id="closeBtn" class="btn my-2 my-sm-0 text-right" type="submit" height="10">x</button></p>
           </div>
         </nav>
-      </div> 
-      </div class="row">
         <nav class="navbar bg-dark">
           <div class="col">
             <img src="images/DD_Transparent.png" height="36"></img>
@@ -45,10 +41,11 @@
           </div>
         </nav>
       </div>
+      <div class="row" style="overflow-y: scroll !important;">  
         <div class="col-12">
           <ul class="list-group">
             <li class="list-group-item">Cras justo odio</li>
-            <a class="list-group-item  outline-danger bg-danger" href="#">Dapibus ac facilisis in</a>
+            <a class="list-group-item  outline-danger bg-danger" href="#" onclick="openInBrowser(generateLink('zombie'))">Dapibus ac facilisis in</a>
             <li class="list-group-item">Morbi leo risus</li>
             <li class="list-group-item">Porta ac consectetur ac</li>
             <li class="list-group-item">Vestibulum at eros</li>
@@ -98,7 +95,7 @@
           </div> -->
       </div> 
     </div>
-    <script src="listBuilder.js">
-    </script>
+    <!-- <script src="js/bootstrap/bootstrap.js"></script> -->
+    <script src="js/listBuilder.js"></script>
   </body>
 </html>

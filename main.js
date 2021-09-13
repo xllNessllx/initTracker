@@ -9,10 +9,15 @@ function createWindow () {
       // transparent: true,
       icon: path.join(__dirname + '/images/DD_Transparent.png'), 
       webPreferences: {
-        preload: path.join(__dirname, 'listBuilder.js')
+      //   preload: path.join(__dirname, 'listBuilder.js')
+      nodeIntegration: true,  // Can cause Security Risk!
+      contextIsolation: false, // Can cause Security Risk!
       }
     })
   
+    // Opens Debug Console
+    win.webContents.openDevTools()
+
     win.removeMenu()
 
     win.loadFile('index.html')
