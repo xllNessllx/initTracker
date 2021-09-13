@@ -1,0 +1,18 @@
+{
+  "name": "inittracker",
+  "version": "1.0.0",
+  "description": "Tracks Iniative and HP of Monsters and Players in DnD",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sebastian Markus",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^14.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.1"
+  }
+}
