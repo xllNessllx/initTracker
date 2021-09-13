@@ -5,14 +5,17 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "make": "electron-packager .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sebastian Markus",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^14.0.0"
+    "electron": "^14.0.0",
+    "electron-packager": "^15.4.0"
   },
   "dependencies": {
-    "bootstrap": "^5.1.1"
+    "bootstrap": "^5.1.1",
+    "open": "^8.2.1"
   }
 }
