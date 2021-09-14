@@ -2,3 +2,13 @@
     /* -user-select: none; */
     -webkit-app-region: drag;
   }
+
+  #navbar {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
