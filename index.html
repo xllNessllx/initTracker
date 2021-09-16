@@ -25,12 +25,15 @@
           </div> 
           <div class="col">  
             <input id="initiative_id" class="form-control mr-sm-2" type="number" placeholder="Initiative">
-        </div>  
+          </div>
+          <div class="col">  
+            <input id="hp_id" class="form-control mr-sm-2" type="number" placeholder="HP">
+          </div>   
           <div class="col">
             <button class="btn btn-outline-danger btn-light my-2 my-sm-0" type="submit" onclick="addParticipant()">Add</button>
           </div>
           <div class="col">
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Next Turn</button>
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" onclick="advanceTurn()">Next Turn</button>
           </div>
         </nav>
       </div>
@@ -38,11 +41,20 @@
         <div class="col-12">
           <br><br><br><br>
           <ul class="list-group" id="app">
-            <initlist
-              v-for="item in listOfParticipants"
-              v-bind:participant="item"
-              v-bind:initiative="item.name"
-            ></initlist>
+            <div v-for="item in listOfParticipants">
+              <div v-if="item.active">
+                <initlist_active
+                 v-bind:participant="item"
+                 v-bind:initiative="item.name"
+                ></initlist_active>
+              </div>
+              <div v-else>
+              <initlist
+                 v-bind:participant="item"
+                 v-bind:initiative="item.name"
+                ></initlist>
+              </div>
+            </div>
           </ul>
         </div>      
       </div> 
@@ -51,6 +63,7 @@
     <script src="js/listBuilder.js"></script>
     <script src="js/addParticipant.js"></script>
     <script src="js/statGenerator.js"></script>
+    <script src="js/advanceTurn.js"></script>
     <script src="js/simplebar_script.js"></script>
   </body>
 </html>

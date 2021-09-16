@@ -5,7 +5,6 @@ function compareInit(a,b){
       if (a.initiative > b.initiative) {
         return 1;
       }
-      // a must be equal to b
       return 0;
 }
 
