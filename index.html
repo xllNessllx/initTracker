@@ -21,13 +21,13 @@
             <a class="navbar-brand text-white" href="#">initTracker</a>
           </div>
           <div class="col">  
-              <input id="name" class="form-control mr-sm-2" type="search" placeholder="Name">
+              <input id="name_id" class="form-control mr-sm-2" type="text" placeholder="Name">
           </div> 
           <div class="col">  
-            <input id="initiative" class="form-control mr-sm-2" type="search" placeholder="Initiative">
+            <input id="initiative_id" class="form-control mr-sm-2" type="number" placeholder="Initiative">
         </div>  
           <div class="col">
-            <button class="btn btn-outline-danger btn-light my-2 my-sm-0" type="submit">Add</button>
+            <button class="btn btn-outline-danger btn-light my-2 my-sm-0" type="submit" onclick="addParticipant()">Add</button>
           </div>
           <div class="col">
             <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Next Turn</button>
@@ -36,59 +36,21 @@
       </div>
       <div class="row">  
         <div class="col-12">
-          <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <a class="list-group-item  outline-danger bg-danger" href="#" onclick="openInBrowser(generateLink('zombie'))">Dapibus ac facilisis in</a>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+          <br><br><br><br>
+          <ul class="list-group" id="app">
+            <initlist
+              v-for="item in listOfParticipants"
+              v-bind:participant="item"
+              v-bind:initiative="item.name"
+            ></initlist>
           </ul>
-          <!-- <div class="d-grid gap-2 mt-2">
-            <div class="p-2 bg-danger borderr">Grid item 1</div>
-            <div class="p-2 bg-white border">Grid item 2</div>
-            <div class="p-2 bg-white border">Grid item 3</div>
-            <div class="p-2 bg-white border">Grid item 1</div>
-            <div class="p-2 bg-white border">Grid item 2</div>
-            <div class="p-2 bg-white border">Grid item 3</div>
-            <div class="p-2 bg-white border">Grid item 1</div>
-            <div class="p-2 bg-white border">Grid item 2</div>
-            <div class="p-2 bg-white border">Grid item 3</div>
-            <div class="p-2 bg-white border">Grid item 1</div>
-            <div class="p-2 bg-white border">Grid item 2</div>
-            <div class="p-2 bg-white border">Grid item 3</div>
-            <div class="p-2 bg-white border">Grid item 1</div>
-            <div class="p-2 bg-white border">Grid item 2</div>
-            <div class="p-2 bg-white border">Grid item 3</div>
-            <div class="p-2 bg-white border">Grid item 1</div>
-            <div class="p-2 bg-white border">Grid item 2</div>
-            <div class="p-2 bg-white border">Grid item 3</div>
-            <div class="p-2 bg-white border">Grid item 1</div>
-            <div class="p-2 bg-white border">Grid item 2</div>
-            <div class="p-2 bg-white border">Grid item 3</div>
-          </div> -->
+        </div>      
       </div> 
     </div>
     <!-- <script src="js/bootstrap/bootstrap.js"></script> -->
     <script src="js/listBuilder.js"></script>
+    <script src="js/addParticipant.js"></script>
+    <script src="js/statGenerator.js"></script>
+    <script src="js/simplebar_script.js"></script>
   </body>
 </html>
