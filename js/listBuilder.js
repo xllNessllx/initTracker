@@ -6,7 +6,12 @@ listOfParticipants = [
 
 Vue.component('initlist', {
   props: ['participant'],
-  template: '<a class="list-group-item outline-danger" href="#" onclick="openInBrowser(generateLink({{participant.name}}))"> {{participant.name}} | {{participant.initiative}} </a>'
+  template: '<a class="list-group-item outline-danger" href="#" onclick="openInBrowser(generateLink({{participant.name}}))">' 
+  + '<div class="row">'
+  + '<div class="col-3">{{participant.name}}</div>'
+  + '<div class="col-1">{{participant.initiative}}</div>'
+  + '</div>'
+  + '</a>'
 })
 
 var app = new Vue({
