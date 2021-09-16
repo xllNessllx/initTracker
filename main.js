@@ -21,7 +21,7 @@ function createWindow () {
     })
   
     // Opens Debug Console
-    // win.webContents.openDevTools()
+    win.webContents.openDevTools()
 
     win.removeMenu()
 

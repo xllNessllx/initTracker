@@ -1,5 +1,3 @@
-var activeInit = -1
-
 function checkInitiative(){
     test = true
     listOfParticipants.forEach(element => {

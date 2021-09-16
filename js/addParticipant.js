@@ -26,9 +26,12 @@ function addParticipant(){
     }
 
     // add participant
-    participant = {initiative: new_initiative, name: new_name, health: new_hp}
+    participant = {initiative: new_initiative, name: new_name, health: new_hp, key: key_count}
     listOfParticipants.push(participant)
     listOfParticipants.sort(compareInit)
+
+    // iterate key_count
+    key_count++
 
     // clear input fields
     document.getElementById('name_id').value = ""
