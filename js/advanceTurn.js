@@ -25,4 +25,6 @@ function advanceTurn(){
             element.active = true
         }
     })
+
+    writeStateToFile()
 }

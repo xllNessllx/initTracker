@@ -1,9 +1,37 @@
-listOfParticipants = [
-    {initiative: 0, name: "zombie", health: 10, active: true, key: 0},
-    {initiative: 1, name: "zombie2", health: 10, active: false, key: 1},
-    {initiative: 2, name: "zombie3", health: 10, active: false, key: 2},
-  ]
+const fs = require('fs')
+
+listOfParticipants = []
 
 activeInit = -1
 
-key_count = 3
+key_count = 0
+
+function writeStateToFile(){
+  writeObject = {
+    listOfParticipants,
+    activeInit,
+    key_count
+  }
+  
+  writeString = JSON.stringify(writeObject)
+
+  fs.writeFile('save_state.json',writeString,err => {
+    if (err){
+      throw err
+    }
+  })
+}
+
+readString = fs.readFileSync('save_state.json','utf8', err => {
+  if(err){
+      throw err
+  }
+})
+
+readObject = JSON.parse(readString)
+
+listOfParticipants = readObject.listOfParticipants
+
+activeInit = readObject.activeInit
+
+key_count = readObject.key_count

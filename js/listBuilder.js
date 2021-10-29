@@ -1,6 +1,6 @@
 Vue.component('initlist', {
   props: ['participant'],
-  template: '<a class="list-group-item outline-danger" href="#" onclick="openInBrowser(generateLink({{participant.name}}))">' 
+  template: '<a class="list-group-item outline-danger" href="#" :onclick="participant.link">' 
   + '<div class="row">'
   + '<div class="col-2">{{participant.name}}</div>'
   + '<div class="col-2">Init: {{participant.initiative}}</div>'
@@ -20,7 +20,7 @@ Vue.component('initlist', {
 
 Vue.component('initlist_active', {
   props: ['participant'],
-  template: '<a class="list-group-item outline-danger bg-danger" href="#" onclick="openInBrowser(generateLink({{participant.name}}))">' 
+  template: '<a class="list-group-item outline-danger bg-danger" href="#" :onclick="openInBrowser(participant.link)">' 
   + '<div class="row">'
   + '<div class="col-2">{{participant.name}}</div>'
   + '<div class="col-2">Init: {{participant.initiative}}</div>'

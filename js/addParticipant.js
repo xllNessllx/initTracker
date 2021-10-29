@@ -26,7 +26,7 @@ function addParticipant(){
     }
 
     // add participant
-    participant = {initiative: new_initiative, name: new_name, health: new_hp, key: key_count}
+    participant = {initiative: new_initiative, name: new_name, health: new_hp, key: key_count, link: generateLink(new_name)}
     listOfParticipants.push(participant)
     listOfParticipants.sort(compareInit)
 
